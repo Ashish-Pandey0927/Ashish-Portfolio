@@ -7,7 +7,7 @@ import SkillsSection from './Components/SkillsSection';
 import ProjectsSection from './Components/ProjectsSection';
 import ContactSection from './Components/ContactSection';
 import FooterSection from './Components/FooterSection';
-import AchievementsSection from './Components/AchievementsSection';
+// import AchievementsSection from './Components/AchievementsSection';
 import CustomCursor from './Components/CustomCursor';
 import NotFoundPage from './Components/NotFoundPage'; 
 import AboutPage from './Components/AboutPage'; // Import the About Page
@@ -37,7 +37,7 @@ const App = () => {
         <Route path="/about" element={<AboutPage />} />
 
         {/* Achievements Section */}
-        <Route path="/achievements" element={<AchievementsSection />} />
+        {/* <Route path="/achievements" element={<AchievementsSection />} /> */}
 
         {/* Catch-all 404 Page */}
         <Route path="*" element={<NotFoundPage />} />
