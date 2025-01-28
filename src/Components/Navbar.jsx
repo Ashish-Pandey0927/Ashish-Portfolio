@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link for navigation
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,13 +15,13 @@ const Navbar = () => {
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-6 lg:gap-10">
           <Link
-            to="/projects" // Update with the correct route for Projects
+            to="/projects"
             className="text-gray-400 hover:text-white transition duration-300"
           >
             Projects
           </Link>
           <Link
-            to="/about" // Link to the About page
+            to="/about"
             className="text-gray-400 hover:text-white transition duration-300"
           >
             About
@@ -39,7 +39,8 @@ const Navbar = () => {
             Contact
           </a>
           <a
-            href="#"
+            href="/resume.pdf"  // Link to your PDF file
+            download="Ashish_Pandey_Resume"  // This will set the download file name
             className="bg-gray-700 text-white py-2 px-4 rounded-md hover:bg-gray-600 transition duration-300"
           >
             Resume
@@ -62,13 +63,13 @@ const Navbar = () => {
         <div className="md:hidden bg-gray-800 shadow-md py-4 px-6">
           <div className="flex flex-col items-center gap-4">
             <Link
-              to="/projects" // Update with the correct route for Projects
+              to="/projects"
               className="text-gray-400 hover:text-white transition duration-300"
             >
               Projects
             </Link>
             <Link
-              to="/about" // Link to the About page
+              to="/about"
               className="text-gray-400 hover:text-white transition duration-300"
             >
               About
@@ -86,7 +87,8 @@ const Navbar = () => {
               Contact
             </a>
             <a
-              href="#"
+              href="/GameDevResume.pdf"  // Link to your PDF file
+              download="Ashish_Pandey_Resume"  // This will set the download file name
               className="bg-gray-700 text-white py-2 px-4 rounded-md hover:bg-gray-600 transition duration-300"
             >
               Resume

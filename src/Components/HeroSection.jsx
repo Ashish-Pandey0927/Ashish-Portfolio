@@ -12,7 +12,7 @@ const HeroSection = () => {
         </p>
         <div className="flex justify-center md:justify-start gap-4 mb-8 items-center">
           <button className="border border-white text-white px-6 py-2 rounded-md hover:bg-white hover:text-black transition">
-            Resume
+            <a href="/GameDevResume.pdf" download="Ashish_Pandey_Resume">Resume</a>
           </button>
           <a
             href="https://www.linkedin.com/in/ashish-pandey0927/"
