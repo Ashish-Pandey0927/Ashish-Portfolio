@@ -10,7 +10,7 @@ import FooterSection from './Components/FooterSection';
 // import AchievementsSection from './Components/AchievementsSection';
 import CustomCursor from './Components/CustomCursor';
 import NotFoundPage from './Components/NotFoundPage'; 
-import AboutPage from './Components/AboutPage'; // Import the About Page
+import AboutSection from './Components/AboutSection'; // Import the About Page
 
 const App = () => {
   return (
@@ -34,7 +34,7 @@ const App = () => {
         />
 
         {/* About Page Route */}
-        <Route path="/about" element={<AboutPage />} />
+        <Route path="/about" element={<AboutSection />} />
 
         {/* Achievements Section */}
         {/* <Route path="/achievements" element={<AchievementsSection />} /> */}
