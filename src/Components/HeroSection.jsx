@@ -41,7 +41,7 @@ const HeroSection = () => {
       {/* Profile Image on the Right */}
       <div className="mt-8 md:mt-0 md:ml-10">
         <img
-          src="/public/WhatsApp Image 2025-01-24 at 22.10.31_0cf23788.jpg" // Replace with your actual profile image
+          src="/WhatsApp Image 2025-01-24 at 22.10.31_0cf23788.jpg" // Replace with your actual profile image
           alt="Ashish Pandey"
           className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white"
         />

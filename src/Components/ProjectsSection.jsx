@@ -22,7 +22,7 @@ const projects = [
   },
   {
     title: "Game Development",
-    image: "/public/Screenshot 2024-12-06 201624.png", // Replace with actual image
+    image: "/Screenshot 2024-12-06 201624.png", // Replace with actual image
     description: "A fun 3D game built using Unity and C#.",
     link: "https://example.com/game",
   },

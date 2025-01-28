@@ -3,15 +3,17 @@ import gsap from "gsap";
 
 const SkillsSection = () => {
 
-    useEffect(() => {
-        gsap.from(".skills-item", {
-          opacity: 0,
-          x: -100,
-          duration: 1,
-          stagger: 0.1,
-          ease: "power2.out",
-        });
-      }, []);
+  useEffect(() => {
+    // GSAP animation for skills items
+    gsap.from(".skills-item", {
+      opacity: 0,
+      x: -100,
+      duration: 1,
+      stagger: 0.1,
+      ease: "power2.out",
+    });
+  }, []); // Empty dependency array ensures animation runs only once when component mounts
+
   const skills = [
     "JavaScript",
     "TypeScript",
