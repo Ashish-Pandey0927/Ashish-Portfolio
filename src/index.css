@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: #181818;
+}
+
+
+.pokemon-game {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .pokemon-card img {
+    max-width: 80px;
+  }
+  
+  .battle-section img {
+    max-width: 120px;
+  }
+  
+  .actions button {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  

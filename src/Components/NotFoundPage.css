@@ -1,0 +1,78 @@
+/* General Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .404-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #2d2d2d;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Message Styling */
+  /* .404-message {
+    margin-bottom: 30px;
+  } */
+  
+  /*h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 1.2rem;
+  }
+  
+  /* Game Area */
+  .game-area {
+    position: relative;
+    width: 80vw;
+    height: 60vh;
+    background-color: #1d1d1d;
+    border: 2px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Ball Styling */
+   .ball {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #ff6347;
+    border-radius: 50%;
+    transition: all 0.1s ease;
+  }
+  
+  /* Paddle Styling */
+  .paddle {
+    position: absolute;
+    bottom: 10px;
+    width: 100px;
+    height: 15px;
+    background-color: #00bcd4;
+    border-radius: 5px;
+    transition: left 0.1s ease;
+  }
+  
+  /* Score Styling */
+  .score {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+     
