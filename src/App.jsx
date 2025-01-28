@@ -9,8 +9,8 @@ import ContactSection from './Components/ContactSection';
 import FooterSection from './Components/FooterSection';
 import AchievementsSection from './Components/AchievementsSection';
 import CustomCursor from './Components/CustomCursor';
-import NotFoundPage from './Components/NotFoundPage'; // Import the 404 page
-// import CanvasGame from './Components/CanvasGame'; // Import the game component
+import NotFoundPage from './Components/NotFoundPage'; 
+import AboutPage from './Components/AboutPage'; // Import the About Page
 
 const App = () => {
   return (
@@ -33,11 +33,11 @@ const App = () => {
           } 
         />
 
+        {/* About Page Route */}
+        <Route path="/about" element={<AboutPage />} />
+
         {/* Achievements Section */}
         <Route path="/achievements" element={<AchievementsSection />} />
-
-        {/* Game Route */}
-        {/* <Route path="https://js-2d-pokemon-game.netlify.app/" /> */}
 
         {/* Catch-all 404 Page */}
         <Route path="*" element={<NotFoundPage />} />

@@ -15,21 +15,21 @@ const HeroSection = () => {
             Resume
           </button>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/ashish-pandey0927/"
             className="text-gray-400 hover:text-white text-2xl"
             aria-label="LinkedIn"
           >
             <FaLinkedin />
           </a>
           <a
-            href="#"
+            href="https://x.com/?lang=en-in"
             className="text-gray-400 hover:text-white text-2xl"
             aria-label="Twitter"
           >
             <FaTwitter />
           </a>
           <a
-            href="#"
+            href="https://github.com/Ashish-Pandey0927"
             className="text-gray-400 hover:text-white text-2xl"
             aria-label="GitHub"
           >

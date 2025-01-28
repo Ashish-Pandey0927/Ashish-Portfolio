@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link for navigation
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,18 +14,18 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-6 lg:gap-10">
-          <a
-            href="#"
+          <Link
+            to="/projects" // Update with the correct route for Projects
             className="text-gray-400 hover:text-white transition duration-300"
           >
             Projects
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/about" // Link to the About page
             className="text-gray-400 hover:text-white transition duration-300"
           >
             About
-          </a>
+          </Link>
           <a
             href="#"
             className="text-gray-400 hover:text-white transition duration-300"
@@ -60,18 +61,18 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-gray-800 shadow-md py-4 px-6">
           <div className="flex flex-col items-center gap-4">
-            <a
-              href="#"
+            <Link
+              to="/projects" // Update with the correct route for Projects
               className="text-gray-400 hover:text-white transition duration-300"
             >
               Projects
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/about" // Link to the About page
               className="text-gray-400 hover:text-white transition duration-300"
             >
               About
-            </a>
+            </Link>
             <a
               href="#"
               className="text-gray-400 hover:text-white transition duration-300"
