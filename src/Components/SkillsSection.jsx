@@ -1,17 +1,17 @@
 import React, { useEffect } from "react";
-import gsap from "gsap";
+// import gsap from "gsap";
 
 const SkillsSection = () => {
-  useEffect(() => {
-    // GSAP animation for skills items
-    gsap.from(".skills-item", {
-      opacity: 0,
-      y: 50, // Use vertical movement instead of horizontal to prevent overlap
-      duration: 1,
-      stagger: 0.1,
-      ease: "power2.out",
-    });
-  }, []);
+//   useEffect(() => {
+//     // GSAP animation for skills items
+//     gsap.from(".skills-item", {
+//       opacity: 0,
+//       y: 50, // Use vertical movement instead of horizontal to prevent overlap
+//       duration: 1,
+//       stagger: 0.1,
+//       ease: "power2.out",
+//     });
+//   }, []);
 
   const skills = [
     "JavaScript",
