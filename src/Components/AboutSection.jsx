@@ -41,7 +41,7 @@ const AboutSection = () => {
         {/* Image Section */}
         <div className="about-image md:w-1/2">
           <img
-            src="https://via.placeholder.com/300" // Replace with your image URL
+            src="/WhatsApp Image 2025-06-16 at 12.43.54_ef05f508.jpg" // Replace with your image URL
             alt="Ashish Pandey"
             className="rounded-lg shadow-lg w-full h-auto object-cover"
           />
