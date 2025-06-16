@@ -12,7 +12,7 @@ const ContactSection = () => {
         });
       }, []);
   return (
-    <section className="py-10 px-6 md:px-[400px] text-white">
+    <section className="py-10 px-6 md:px-[400px] text-white" id="contact">
       <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
       <div className="bg-gray-800 p-6 md:p-8 rounded-lg shadow-md contact-form">
         {/* Intro */}

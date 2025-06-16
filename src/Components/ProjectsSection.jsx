@@ -40,7 +40,7 @@ const ProjectsSection = () => {
         });
       }, []);
   return (
-    <section className="py-10 px-6 md:px-[400px]">
+    <section className="py-10 px-6 md:px-[400px]" id="projects">
       <h2 className="text-3xl font-bold text-white mb-6">Projects</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {projects.map((project, index) => (

@@ -15,7 +15,7 @@ const Navbar = () => {
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-6 lg:gap-10">
           <Link
-            to="/projects"
+            to="#projects"
             className="text-gray-400 hover:text-white transition duration-300"
           >
             Projects
@@ -27,13 +27,13 @@ const Navbar = () => {
             About
           </Link>
           <a
-            href="#"
+            href="#skills"
             className="text-gray-400 hover:text-white transition duration-300"
           >
-            Service
+            Skills
           </a>
           <a
-            href="#"
+            href="#contact"
             className="text-gray-400 hover:text-white transition duration-300"
           >
             Contact

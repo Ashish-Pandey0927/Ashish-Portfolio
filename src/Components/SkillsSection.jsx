@@ -28,7 +28,7 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section className="py-10 px-6 md:px-[400px]">
+    <section className="py-10 px-6 md:px-[400px]" id="skills">
       <h2 className="text-3xl font-bold text-white mb-6">Skills</h2>
       <div className="flex flex-wrap gap-4">
         {skills.map((skill, index) => (
