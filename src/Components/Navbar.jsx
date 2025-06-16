@@ -14,12 +14,12 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-6 lg:gap-10">
-          <Link
+          <a
             to="#projects"
             className="text-gray-400 hover:text-white transition duration-300"
           >
             Projects
-          </Link>
+          </a>
           <Link
             to="/about"
             className="text-gray-400 hover:text-white transition duration-300"
