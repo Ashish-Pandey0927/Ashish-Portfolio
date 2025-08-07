@@ -18,13 +18,13 @@ const TimelineSection = () => {
       date: "Dec 2024 - Feb 2025",
       company: "Eklavya.Me",
       position: "Game Dev Intern",
-      logo: "https://media.licdn.com/dms/image/v2/D4D0BAQHwYkiNr198wQ/company-logo_200_200/company-logo_200_200/0/1683632726346?e=1746057600&v=beta&t=-Yk1_sPcOGl_4_UernrZFwWZCBUcJy6qi0CX8Mq5ZpY",
+      logo: "/eklavya.jpg",
     },
     {
       date: "Oct 2023 - Jul 2024",
       company: "Technojam",
       position: "Frontend Developer",
-      logo: "https://media.licdn.com/dms/image/v2/C510BAQEJw3YftWE6uQ/company-logo_200_200/company-logo_200_200/0/1630598126826?e=1746057600&v=beta&t=Z468bRmenH0RZTkYo5bciY11Rs-vYoD1BGXJIJMWJQk",
+      logo: "/techno.jpg",
     },
   ];
 

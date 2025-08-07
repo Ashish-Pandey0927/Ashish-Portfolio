@@ -1,10 +1,25 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
+import { title } from "framer-motion/client";
 
 const projects = [
   {
-    title: "Adayam Project Website",
-    image: "/adayam.png", // Replace with actual image
+    title: "Raised Apparels E-commerce Store",
+    image: "/RAPL.png", // Replace with actual image
+    description: "Architected a MERN stack e-commerce store. Reduced load times by 40% and increased customer conversion by 30% through performance optimization and iterative design.",
+    link: "https://raisedapparels.com",
+    // Replace with actual project link
+      },
+      {
+        title: "digitalwerk",
+        image: "/digitalwerk.png",
+        description: "Designed and developed a high-fidelity clone of an award-winning website, focusing on custom UI/UX and advanced web technologies.",
+        link: "https://awwwards-remake-digitalwerk-main.vercel.app/",
+
+      },
+      {
+        title: "Adayam Project Website",
+        image: "/adayam.png", // Replace with actual image
     description: "A modern portfolio showcasing their work and projects.",
     link: "https://adamya-project.vercel.app/",
   },
