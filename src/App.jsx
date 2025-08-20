@@ -1,21 +1,46 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Lenis from '@studio-freight/lenis';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './Components/Navbar';
-import HeroSection from './Components/HeroSection';
-import TimelineSection from './Components/TimelineSection';
-import SkillsSection from './Components/SkillsSection';
+
+// Your Component Imports
+import Navbar from './New Components/Navbar';
+import Hero from './New Components/Hero';
+import Skills from './New Components/Skills';
+import About from './New Components/About';
+import Works from './New Components/Works';
+import Services from './New Components/Services';
+import Achivments from './New Components/Achivments';
+import Testomonials from './New Components/Testomonials';
+import Footer from './New Components/Footer';
+import AboutSection from './Components/AboutSection';
 import ProjectsSection from './Components/ProjectsSection';
-import ContactSection from './Components/ContactSection';
-import FooterSection from './Components/FooterSection';
-// import AchievementsSection from './Components/AchievementsSection';
-import CustomCursor from './Components/CustomCursor';
 import NotFoundPage from './Components/NotFoundPage'; 
-import AboutSection from './Components/AboutSection'; // Import the About Page
 
 const App = () => {
+
+  // This useEffect hook initializes Lenis for smooth scrolling
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothTouch: true,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    // Cleanup function to destroy Lenis instance on component unmount
+    return () => {
+      lenis.destroy();
+    };
+  }, []); // Empty dependency array ensures this runs only once on mount
+
   return (
     <Router>
-      <CustomCursor />
       <Routes>
         {/* Home Page */}
         <Route 
@@ -23,22 +48,21 @@ const App = () => {
           element={
             <>
               <Navbar />
-              <HeroSection />
-              <TimelineSection />
-              <SkillsSection />
-              <ProjectsSection />
-              <ContactSection />
-              <FooterSection />
+              <Hero />
+              <Skills />
+              <About />
+              <Works />
+              <Services />
+              <Achivments />
+              <Testomonials />
+              <Footer />
             </>
           } 
         />
 
-        {/* About Page Route */}
+        {/* Other Page Routes */}
         <Route path="/about" element={<AboutSection />} />
         <Route path="/projects" element={<ProjectsSection />} />
-
-        {/* Achievements Section */}
-        {/* <Route path="/achievements" element={<AchievementsSection />} /> */}
 
         {/* Catch-all 404 Page */}
         <Route path="*" element={<NotFoundPage />} />

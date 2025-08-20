@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
 
 *{
     box-sizing: border-box;
@@ -9,10 +10,10 @@
 }
 
 body{
-    font-family: Arial, sans-serif;
+    font-family: "Arimo", sans-serif;
     line-height: 1.6;
-    color: #ffffff;
-    background-color: #181818;
+    color: rgb(33, 33, 33);
+    background-color: #efeeec;
 }
 
 
