@@ -19,7 +19,7 @@ const featuredWorks = [
     title: "Project Two",
     date: "2023",
     category: "Web Application",
-    imageUrl: "/public/adayam.png",
+    imageUrl: "/adayam.png",
     description: "Developed a high-performance e-commerce platform.",
     color: "#ef4444", // red-500
   },
@@ -28,7 +28,7 @@ const featuredWorks = [
     title: "Game Dev",
     date: "2022-2023",
     category: "Indie Game",
-    imageUrl: "/public/digitalwerk.png",
+    imageUrl: "/digitalwerk.png",
     description: "Created a 2D platformer with a custom physics engine.",
     color: "#22c55e", // green-500
   },
@@ -37,7 +37,7 @@ const featuredWorks = [
     title: "Portfolio",
     date: "2024",
     category: "Personal Website",
-    imageUrl: "/public/hackathon.png",
+    imageUrl: "/hackathon.png",
     description: "Designed and built a personal portfolio with Next.js.",
     color: "#f97316", // orange-500
   },

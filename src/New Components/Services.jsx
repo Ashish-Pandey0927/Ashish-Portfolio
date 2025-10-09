@@ -2,7 +2,7 @@ import React from "react";
 import ServiceItem from "./ServiceItem"; // Make sure to import the new component
 
 const servicesList = [
-  { title: "Web development", img: "/public/webdev.jpg" },
+  { title: "Web development", img: "/webdev.jpg" },
   { title: "UI/UX", img: "/digitalwerk.png" },
   { title: "Game Development", img: "/Unity.png" },
   { title: "Cloud Solutions", img: "/services.jpg" },
