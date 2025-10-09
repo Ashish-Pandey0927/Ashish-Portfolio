@@ -34,7 +34,7 @@ const featuredWorks = [
   },
   {
     id: 4,
-    title: "Hackathon Website",
+    title: "Dextrix 4.0",
     date: "2024",
     category: "Hackathon Website",
     imageUrl: "/hackathon.png",
