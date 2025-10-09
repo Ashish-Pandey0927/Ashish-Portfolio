@@ -5,13 +5,13 @@ const works = [
   { title: "RAPL", img: "/RAPL.png" },
   { title: "Project Two", img: "/adayam.png" },
   { title: "Game Dev", img: "/digitalwerk.png" },
-  { title: "Portfolio", img: "/hackathon.png" },
+  { title: "Hackathon", img: "/hackathon.png" },
 ];
 
 const services = [
   {
     title: "Web development",
-    img: "/public/webdev.jpg",
+    img: "/webdev.jpg",
   },
   {
     title: "UI/UX",
@@ -242,7 +242,7 @@ const Navbar = () => {
                 scrolled ? scrolledLinkClasses : topLinkClasses
               }`}
             >
-              Careers
+              Clients
             </a>
           </div>
         </div>

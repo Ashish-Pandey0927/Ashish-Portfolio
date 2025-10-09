@@ -10,7 +10,7 @@ const featuredWorks = [
     title: "RAPL",
     date: "2024-2025",
     category: "Clothing Brand",
-    imageUrl: "/public/RAPL.png",
+    imageUrl: "/RAPL.png",
     description: "An extra 3m clicks regionally through SEO.",
     color: "#3b82f6", // blue-500
   },
@@ -34,11 +34,11 @@ const featuredWorks = [
   },
   {
     id: 4,
-    title: "Portfolio",
+    title: "Hackathon Website",
     date: "2024",
-    category: "Personal Website",
+    category: "Hackathon Website",
     imageUrl: "/hackathon.png",
-    description: "Designed and built a personal portfolio with Next.js.",
+    description: "Designed and built a Hackathon website with Next.js.",
     color: "#f97316", // orange-500
   },
 ];
