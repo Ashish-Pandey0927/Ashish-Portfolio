@@ -1,38 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family: "Arimo", sans-serif;
-    line-height: 1.6;
-    color: rgb(33, 33, 33);
-    background-color: #efeeec;
+body {
+  font-family: "Arimo", sans-serif;
+  line-height: 1.6;
+  color: rgb(33, 33, 33);
+  background-color: #efeeec;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
 
 .pokemon-game {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pokemon-card img {
+  max-width: 80px;
+}
+
+.battle-section img {
+  max-width: 120px;
+}
+
+.actions button {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg) scale(1.4) translate(-10%, -10%);
   }
-  
-  .pokemon-card img {
-    max-width: 80px;
+  to {
+    transform: rotate(360deg) scale(1.4) translate(-10%, -10%);
   }
-  
-  .battle-section img {
-    max-width: 120px;
-  }
-  
-  .actions button {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
+}
+
+.animate-spin-slow {
+  animation: spinSlow 40s linear infinite;
+}

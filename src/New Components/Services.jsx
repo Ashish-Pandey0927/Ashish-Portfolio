@@ -6,7 +6,7 @@ const servicesList = [
   { title: "UI/UX", img: "/digitalwerk.png" },
   { title: "Game Development", img: "/Unity.png" },
   { title: "Cloud Solutions", img: "/services.jpg" },
-  { title: "Branding", img: "/NFT.png" },
+  { title: "Branding", img: "/Services/NFT.png" },
   { title: "Onsite SEO", img: "/SEO.jpg" },
 ];
 

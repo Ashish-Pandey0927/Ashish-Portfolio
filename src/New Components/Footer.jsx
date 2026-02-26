@@ -63,9 +63,9 @@ const Footer = () => {
             
             {/* Link Columns */}
             <div className="col-span-12 lg:col-span-6 lg:col-start-6 flex flex-wrap justify-between gap-y-10">
-              <div className="flex flex-col items-start gap-y-1.5 border-l border-white/20 pl-3 w-1/2 md:w-auto"><AnimatedLink href="#">Services</AnimatedLink><AnimatedLink href="#">Work</AnimatedLink><AnimatedLink href="#">About</AnimatedLink><AnimatedLink href="#">Culture</AnimatedLink><AnimatedLink href="#">Meet The Risers</AnimatedLink></div>
-              <div className="flex flex-col items-start gap-y-1.5 border-l border-white/20 pl-3 w-1/2 md:w-auto"><AnimatedLink href="#">Testimonials</AnimatedLink><AnimatedLink href="#">Blog</AnimatedLink><AnimatedLink href="#">Webinars</AnimatedLink><AnimatedLink href="#">Careers</AnimatedLink></div>
-              <div className="flex flex-col items-start gap-y-1.5 border-l border-white/20 pl-3 w-1/2 md:w-auto"><AnimatedLink href="#">Sheffield</AnimatedLink><AnimatedLink href="#">Manchester</AnimatedLink><AnimatedLink href="#">London</AnimatedLink><AnimatedLink href="#">New York</AnimatedLink><AnimatedLink href="#">Contact</AnimatedLink></div>
+              <div className="flex flex-col items-start gap-y-1.5 border-l border-white/20 pl-3 w-1/2 md:w-auto"><AnimatedLink href="#">Services</AnimatedLink><AnimatedLink href="#">Work</AnimatedLink><AnimatedLink href="#">About</AnimatedLink></div>
+              <div className="flex flex-col items-start gap-y-1.5 border-l border-white/20 pl-3 w-1/2 md:w-auto"><AnimatedLink href="#">Testimonials</AnimatedLink><AnimatedLink href="#">Blog</AnimatedLink><AnimatedLink href="#">Webinars</AnimatedLink></div>
+              <div className="flex flex-col items-start gap-y-1.5 border-l border-white/20 pl-3 w-1/2 md:w-auto"><AnimatedLink href="/contact">Contact</AnimatedLink></div>
             </div>
           </div>
 
