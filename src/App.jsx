@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import Lenis from '@studio-freight/lenis';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
 // Components
+import PixelTransition from './Components/PixelTransition';
 import Navbar from './New Components/Navbar';
 import Hero from './New Components/Hero';
 import Skills from './New Components/Skills';
@@ -12,12 +14,16 @@ import Services from './New Components/Services';
 import Achivments from './New Components/Achivments';
 import Testomonials from './New Components/Testomonials';
 import Footer from './New Components/Footer';
-import AboutSection from './Components/AboutSection';
-import ProjectsSection from './Components/ProjectsSection';
 import NotFoundPage from './Components/NotFoundPage';
 import GetInTouch from './New Components/GetInTouch';
 
-const App = () => {
+// Pages
+import AboutPage from './Pages/AboutPage';
+import WorksPage from './Pages/WorksPage';
+import ServicesPage from './Pages/ServicesPage';
+import ClientsPage from './Pages/ClientsPage';
+
+const AppContent = () => {
 
   useEffect(() => {
   const lenis = new Lenis({ lerp: 0.08 });
@@ -39,35 +45,48 @@ const App = () => {
   };
 }, []);
 
+  const location = useLocation();
+
   return (
-    <Router>
+    <>
       {/* Navbar ALWAYS visible */}
       <Navbar />
 
-      <Routes>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route 
+            path="/" 
+            element={
+              <PixelTransition>
+                <>
+                  <Hero />
+                  <Skills />
+                  <About />
+                  <Works />
+                  <Services />
+                  <Achivments />
+                  <Testomonials />
+                  <Footer />
+                </>
+              </PixelTransition>
+            } 
+          />
+          <Route path="/about" element={<PixelTransition><AboutPage /></PixelTransition>} />
+          <Route path="/works" element={<PixelTransition><WorksPage /></PixelTransition>} />
+          <Route path="/services" element={<PixelTransition><ServicesPage /></PixelTransition>} />
+          <Route path="/clients" element={<PixelTransition><ClientsPage /></PixelTransition>} />
+          <Route path="/contact" element={<PixelTransition><GetInTouch /></PixelTransition>} />
+          <Route path="*" element={<PixelTransition><NotFoundPage /></PixelTransition>} />
+        </Routes>
+      </AnimatePresence>
+    </>
+  );
+};
 
-        <Route 
-          path="/" 
-          element={
-            <>
-              <Hero />
-              <Skills />
-              <About />
-              <Works />
-              <Services />
-              <Achivments />
-              <Testomonials />
-              <Footer />
-            </>
-          } 
-        />
-
-        <Route path="/about" element={<AboutSection />} />
-        <Route path="/projects" element={<ProjectsSection />} />
-        <Route path="/contact" element={<GetInTouch />} />
-        <Route path="*" element={<NotFoundPage />} />
-
-      </Routes>
+const App = () => {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 };

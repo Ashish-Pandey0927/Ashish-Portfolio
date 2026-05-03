@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import Lottie from "lottie-react";
 import waveAnimation from "../assets/lottie/wave.json";
+import { FaBriefcase, FaListUl, FaUser, FaUsers, FaEnvelope } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 const works = [
   { title: "RAPL", img: "Services/RAPL.png" },
@@ -113,12 +115,12 @@ const DropdownOverlay = ({ items, title, onClose, onMouseEnter }) => {
                 alt={items[activeIndex].title}
                 className="absolute inset-0 h-full w-full object-cover rounded-xl"
               />
-              <a
-                href="#"
+              <Link
+                to={isServicesLayout ? "/services" : "/works"}
                 className="absolute bottom-4 left-4 text-white text-sm z-10"
               >
                 View All {isServicesLayout ? "Services" : title} →
-              </a>
+              </Link>
             </>
           )}
         </div>
@@ -194,7 +196,7 @@ const Navbar = () => {
 
   // Base classes that are always applied to the navbar.
   const baseNavbarClasses =
-    "fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl flex items-center justify-between z-50 px-4 py-2 transition-all duration-300 ease-in-out rounded-full";
+    "fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl hidden lg:flex items-center justify-between z-50 px-4 py-2 transition-all duration-300 ease-in-out rounded-full";
 
   // Classes that change based on the 'scrolled' state.
   const scrolledNavbarClasses = "bg-white/60 backdrop-blur-lg shadow-md";
@@ -217,14 +219,14 @@ const Navbar = () => {
           scrolled ? scrolledNavbarClasses : topNavbarClasses
         } z-[62]`}
       >
-        <a
-          href="#"
+        <Link
+          to="/"
           className={`text-lg font-bold ${
             scrolled ? "text-gray-900" : "text-white"
           }`}
         >
           Ashish Pandey
-        </a>
+        </Link>
         <div className="relative group hidden lg:inline-flex items-center bg-gray-500/10 rounded-full">
           <div className="z-10 relative flex">
             <div
@@ -232,59 +234,59 @@ const Navbar = () => {
               onMouseEnter={() => handleDropdownEnter("works")}
               onMouseLeave={handleDropdownLeave}
             >
-              <a
-                href="#"
+              <Link
+                to="/works"
                 className={`${baseLinkClasses} ${
                   scrolled ? scrolledLinkClasses : topLinkClasses
                 }`}
               >
                 Work +
-              </a>
+              </Link>
             </div>
             <div
               className="relative"
               onMouseEnter={() => handleDropdownEnter("services")}
               onMouseLeave={handleDropdownLeave}
             >
-              <a
-                href="#"
+              <Link
+                to="/services"
                 className={`${baseLinkClasses} ${
                   scrolled ? scrolledLinkClasses : topLinkClasses
                 }`}
               >
                 Services +
-              </a>
+              </Link>
             </div>
-            <a
-              href="#"
+            <Link
+              to="/about"
               className={`${baseLinkClasses} ${
                 scrolled ? scrolledLinkClasses : topLinkClasses
               }`}
             >
               About
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/clients"
               className={`${baseLinkClasses} ${
                 scrolled ? scrolledLinkClasses : topLinkClasses
               }`}
             >
               Clients
-            </a>
+            </Link>
           </div>
         </div>
 
         {/* "Get in touch" Button */}
         {/* Get in touch Button */}
         <div className="hidden lg:inline-flex">
-          <a
+          <Link
             onMouseEnter={() => {
               lottieRef.current?.play();
             }}
             onMouseLeave={() => {
               lottieRef.current?.stop();
             }}
-            href="/contact"
+            to="/contact"
             className={`relative group inline-flex items-center justify-center gap-x-2 font-medium overflow-hidden border cursor-pointer text-base px-6 py-2.5 rounded-full transition-all duration-300 ${
               scrolled ? "bg-gray-900 text-white" : "bg-white text-gray-900"
             }`}
@@ -322,7 +324,7 @@ const Navbar = () => {
                 className="w-full h-full"
               />
             </div>
-          </a>
+          </Link>
         </div>
       </nav>
       {dropdown === "works" && isDropdownActive && (
@@ -341,6 +343,30 @@ const Navbar = () => {
           onMouseEnter={handleDropdownBoxEnter}
         />
       )}
+
+      {/* Mobile Bottom Navbar */}
+      <div className="fixed bottom-8 left-1/2 -translate-x-1/2 w-[95%] max-w-[400px] bg-white/90 backdrop-blur-lg shadow-2xl rounded-full z-[999] flex items-center justify-around py-3 px-2 sm:px-4 lg:hidden">
+        <Link to="/works" className="flex flex-col items-center gap-1 text-gray-700 hover:text-black w-1/5">
+          <FaBriefcase className="text-xl" />
+          <span className="text-[10px] font-medium">Work</span>
+        </Link>
+        <Link to="/services" className="flex flex-col items-center gap-1 text-gray-700 hover:text-black w-1/5">
+          <FaListUl className="text-xl" />
+          <span className="text-[10px] font-medium">Services</span>
+        </Link>
+        <Link to="/about" className="flex flex-col items-center gap-1 text-gray-700 hover:text-black w-1/5">
+          <FaUser className="text-xl" />
+          <span className="text-[10px] font-medium">About</span>
+        </Link>
+        <Link to="/clients" className="flex flex-col items-center gap-1 text-gray-700 hover:text-black w-1/5">
+          <FaUsers className="text-xl" />
+          <span className="text-[10px] font-medium">Clients</span>
+        </Link>
+        <Link to="/contact" className="flex flex-col items-center gap-1 text-gray-700 hover:text-black w-1/5">
+          <FaEnvelope className="text-xl" />
+          <span className="text-[10px] font-medium">Contact</span>
+        </Link>
+      </div>
     </>
   );
 };

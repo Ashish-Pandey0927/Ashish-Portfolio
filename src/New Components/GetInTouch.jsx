@@ -72,10 +72,10 @@ const GetInTouch = () => {
       </motion.div>
 
       {/* Center Content (ALWAYS CENTERED) */}
-      <div className="fixed inset-0 flex items-center justify-center z-10">
+      <div className="fixed inset-0 flex items-center justify-center z-10 px-4">
         <a
           href="mailto:ashish09274377@gmail.com"
-          className="text-[3rem] font-bold"
+          className="text-2xl sm:text-4xl md:text-[3rem] font-bold text-center break-all sm:break-normal"
         >
           mailto: ashish09274377@gmail.com
         </a>

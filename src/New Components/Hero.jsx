@@ -68,7 +68,7 @@ const Hero = () => {
           <div className='col-start-1 row-start-1 z-20 relative flex justify-center items-center bg-gray-900/40'>
             <div className='flex flex-col items-center'>
               {/* Increased font size and adjusted tracking for a cooler look */}
-              <h1 className='flex flex-col text-center justify-center text-white text-7xl md:text-8xl lg:text-9xl font-sans-primary font-bold tracking-tighter'>
+              <h1 className='flex flex-col text-center justify-center text-white text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-sans-primary font-bold tracking-tighter'>
                 
                 {/* "Namaste" Animation */}
                 <div className='overflow-hidden pb-2'>
@@ -84,9 +84,9 @@ const Hero = () => {
                   {/* "Ashish" animates from the left */}
                   <div className='overflow-hidden'>
                      <div 
-                       className={`relative transition-transform duration-1000 ease-out delay-300 ${animate ? 'translate-x-0' : '-translate-x-full'} pl-12 pt-4`}
+                       className={`relative transition-transform duration-1000 ease-out delay-300 ${animate ? 'translate-x-0' : '-translate-x-full'} pl-8 sm:pl-12 pt-4`}
                      >
-                        <span className='absolute top-0 left-0 text-3xl font-light tracking-normal opacity-80'>I&apos;m</span>
+                        <span className='absolute top-0 left-0 text-lg sm:text-3xl font-light tracking-normal opacity-80'>I&apos;m</span>
                        Ashish
                      </div>
                   </div>
@@ -104,7 +104,7 @@ const Hero = () => {
                   {/* "Pandey" animates from the right */}
                   <div className='overflow-hidden'>
                     <div 
-                      className={`py-4 transition-transform duration-1000 ease-out delay-500 ${animate ? 'translate-x-0' : 'translate-x-full'} pr-12 pt-4`}
+                      className={`py-4 transition-transform duration-1000 ease-out delay-500 ${animate ? 'translate-x-0' : 'translate-x-full'} pr-4 sm:pr-12 pt-4`}
                     >
                       Pandey
                     </div>

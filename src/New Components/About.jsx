@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const About = () => {
   return (
     <section className='w-full py-8 md:py-24 xl:py-4'>
-      <div className='w-full max-w-7xl mx-8 '>
+      <div className='w-full max-w-7xl mx-auto px-4 sm:px-8 '>
         <div className='w-full flex flex-col-reverse md:flex-row justify-around items-stretch gap-y-8 gap-x-20'>
           
           {/* Left Column: Intro Text */}
@@ -31,7 +32,7 @@ const About = () => {
             
             <div className='flex flex-col sm:flex-row items-start gap-4'>
               {/* Button 1: My Story */}
-              <a href="#" className='group w-full sm:w-auto inline-flex items-center justify-center relative font-semibold overflow-hidden px-6 py-3 rounded-full transition-all duration-300 ease-in-out bg-white text-gray-900 ring-1 ring-gray-200 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-900/50'>
+              <Link to="/about" className='group w-full sm:w-auto inline-flex items-center justify-center relative font-semibold overflow-hidden px-6 py-3 rounded-full transition-all duration-300 ease-in-out bg-white text-gray-900 ring-1 ring-gray-200 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-900/50'>
                 <div className='relative h-6 overflow-hidden'>
                   <div className='transition-transform duration-300 group-hover:-translate-y-6'>
                     <div className='flex items-center gap-x-2'>
@@ -46,9 +47,9 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-              </a>
+              </Link>
               {/* Button 2: My Services */}
-              <a href="#" className='group w-full sm:w-auto inline-flex items-center justify-center relative font-semibold overflow-hidden px-6 py-3 rounded-full transition-all duration-300 ease-in-out bg-white text-gray-900 ring-1 ring-gray-200 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-900/50'>
+              <Link to="/services" className='group w-full sm:w-auto inline-flex items-center justify-center relative font-semibold overflow-hidden px-6 py-3 rounded-full transition-all duration-300 ease-in-out bg-white text-gray-900 ring-1 ring-gray-200 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-900/50'>
                  <div className='relative h-6 overflow-hidden'>
                   <div className='transition-transform duration-300 group-hover:-translate-y-6'>
                     <div className='flex items-center gap-x-2'>
@@ -63,7 +64,7 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
 

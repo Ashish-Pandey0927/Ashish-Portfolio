@@ -44,7 +44,7 @@ const Footer = () => {
                 <input 
                   type="email" 
                   placeholder="Your Email Address"
-                  className="appearance-none transition bg-gray-700 rounded-full w-full text-white font-medium tracking-tight text-lg px-5 py-4 lg:text-xl lg:px-6 lg:py-5 placeholder:text-white/50 focus:outline-none focus:ring-3 focus:ring-white/15"
+                  className="appearance-none transition bg-gray-700 rounded-full w-full text-white font-medium tracking-tight text-sm sm:text-lg pr-14 pl-5 py-3 sm:py-4 lg:text-xl lg:px-6 lg:py-5 placeholder:text-white/50 focus:outline-none focus:ring-3 focus:ring-white/15"
                 />
                 <div className="absolute top-0 right-0 p-2">
                   <button type="submit" className="group w-10 h-10 lg:w-12 lg:h-12 bg-teal-400 text-black rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-white">
@@ -71,7 +71,7 @@ const Footer = () => {
 
           {/* Middle Section: Large Logo Text */}
           <div className="col-span-12 mt-10 lg:mt-32 text-center">
-            <h1 className="text-8xl md:text-9xl font-bold tracking-tighter text-white">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white break-words">
               Ashish Pandey
             </h1>
           </div>

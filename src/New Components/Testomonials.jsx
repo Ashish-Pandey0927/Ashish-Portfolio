@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 // --- Your Testimonials Data ---
 // Added a 'color' property to each testimonial for unique card backgrounds.
@@ -50,9 +51,9 @@ const Testomonials = () => {
       <div className="relative z-10 w-full px-4">
          {/* Section Header */}
         <div className="flex items-center justify-between mb-6">
-          <h2 className="flex items-center gap-4 text-[6vw] font-bold text-black">
+          <h2 className="flex items-center gap-2 sm:gap-4 text-4xl sm:text-[6vw] font-bold text-black flex-wrap">
             What
-             <span className="inline-block rounded-[20%] overflow-hidden w-20 h-20 align-middle">
+             <span className="inline-block rounded-[20%] overflow-hidden w-12 h-12 sm:w-20 sm:h-20 align-middle shrink-0">
               <img
                 src="https://placehold.co/100x100/d1d4f7/333?text=💬"
                 alt="Quote Icon"
@@ -62,6 +63,21 @@ const Testomonials = () => {
             </span>
             Clients Say
           </h2>
+          <Link
+            to="/clients"
+            className="group bg-white px-6 sm:px-8 py-2 sm:py-3 rounded-full text-black font-medium text-xs sm:text-sm shadow transition hover:shadow-lg flex items-center gap-2 overflow-hidden relative shrink-0"
+          >
+            <div className="relative overflow-hidden h-7 flex items-center">
+              <div className="transition-transform duration-300 ease-in-out group-hover:-translate-y-7">
+                <span>View All Success</span>
+                <span className="text-base ml-2">↗</span>
+              </div>
+              <div className="transition-transform duration-300 ease-in-out absolute top-0 left-0 group-hover:translate-y-0 translate-y-7">
+                <span>View All Success</span>
+                <span className="text-base ml-2">↗</span>
+              </div>
+            </div>
+          </Link>
         </div>
         <hr className="border-gray-300 mb-12" />
       </div>
@@ -111,7 +127,7 @@ const Card = ({ i, name, title, quote, image, progress, range, color }) => {
         backgroundColor: color, // Apply the unique color here
       }}
       // Removed bg-white to allow the dynamic color to show
-      className="absolute w-96 h-96 md:w-[500px] md:h-[500px] p-8 rounded-2xl shadow-2xl flex flex-col justify-center items-center text-center"
+      className="absolute w-[90vw] max-w-[360px] h-96 md:max-w-none md:w-[500px] md:h-[500px] p-6 sm:p-8 rounded-2xl shadow-2xl flex flex-col justify-center items-center text-center"
     >
       <img src={image} alt={name} className="w-24 h-24 rounded-full mb-6 border-4 border-gray-100/50" />
       <p className="text-xl md:text-2xl font-normal text-gray-700 italic mb-6">"{quote}"</p>

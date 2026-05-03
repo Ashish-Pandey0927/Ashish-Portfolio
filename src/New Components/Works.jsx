@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Link } from "react-router-dom";
 import { FaMagnifyingGlass, FaChartLine } from "react-icons/fa6";
 
 const featuredWorks = [
@@ -72,19 +73,29 @@ const Works = () => {
     ["0%", `-${(featuredWorks.length - 1) * 100}%`]
   );
 
+  const xTransformMobile = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["0%", `-${(featuredWorks.length - 1) * 100}vw`]
+  );
+
   return (
     <section
       ref={targetRef}
       className="relative w-full scroll-smooth"
       style={{ height: `${featuredWorks.length * 100}vh` }}
     >
-      <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
+      {/* DESKTOP VIEW */}
+      <div className="hidden lg:flex sticky top-0 h-screen w-full items-center justify-center overflow-hidden">
         <div className="w-[95%] h-[70vh] bg-[#111212] rounded-3xl grid grid-cols-1 lg:grid-cols-12 px-5 lg:px-10">
 
           {/* LEFT COLUMN */}
           <div className="relative col-span-12 lg:col-span-5 h-full flex flex-col justify-center mt-10">
-            <h2 className="absolute top-1 text-lg font-bold text-[#eefeee] uppercase tracking-widest">
-              Featured Work
+            <h2 className="absolute top-1 text-lg font-bold text-[#eefeee] uppercase tracking-widest flex items-center justify-between w-[95%]">
+              <span>Featured Work</span>
+              <Link to="/works" className="text-xs font-medium border border-white/20 px-4 py-1.5 rounded-full hover:bg-white hover:text-black transition-colors">
+                View All
+              </Link>
             </h2>
 
             <div
@@ -146,7 +157,7 @@ const Works = () => {
                       onMouseLeave={() => setActiveProject(null)}
                     >
                       {/* IMAGE + VIDEO CONTAINER */}
-                      <div className="relative w-full h-full mt-8 rounded-2xl overflow-hidden">
+                      <div className="relative w-full h-full mt-8 rounded-2xl overflow-hidden bg-black/20">
 
                         {/* Thumbnail */}
                         <img
@@ -215,8 +226,71 @@ const Works = () => {
               </div>
             </div>
           </div>
-
         </div>
+      </div>
+
+      {/* MOBILE / TABLET HORIZONTAL VIEW */}
+      <div className="flex lg:hidden sticky top-0 h-screen w-full items-center overflow-hidden bg-[#111212]">
+        <h2 className="absolute top-10 left-5 right-5 text-lg font-bold text-[#eefeee] uppercase tracking-widest z-10 flex justify-between items-center">
+          <span>Featured Work</span>
+          <Link to="/works" className="text-xs font-medium border border-white/20 px-3 py-1.5 rounded-full hover:bg-white hover:text-black transition-colors">
+            View All
+          </Link>
+        </h2>
+        <motion.div
+          style={{ x: xTransformMobile }}
+          className="flex h-[70vh] items-center"
+          // We set the width to (N * 100vw) so it holds all cards side by side
+          // Actually each card will just be w-screen flex-shrink-0
+        >
+          {featuredWorks.map((work) => (
+            <div
+              key={work.id}
+              className="w-screen h-full flex flex-col justify-center px-5 flex-shrink-0"
+            >
+              <div className="w-full h-[60vh] relative rounded-3xl overflow-hidden bg-gray-800">
+                {/* Image */}
+                <img
+                  src={work.imageUrl}
+                  alt={work.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                
+                {/* Dark overlay for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/40" />
+
+                <div className="absolute inset-0 p-6 flex flex-col justify-between">
+                  <div className="flex justify-between items-start">
+                    <h3 className="text-3xl font-bold text-white leading-tight">
+                      {work.title}
+                    </h3>
+                    <span className="text-white/70 text-sm">
+                      [{work.date}]
+                    </span>
+                  </div>
+
+                  <div>
+                    <div className="inline-flex items-center rounded-full font-medium text-white bg-white/20 backdrop-blur-sm text-xs gap-x-2 py-1.5 px-3 mb-4">
+                      <FaMagnifyingGlass className="text-[10px]" />
+                      <span>{work.category}</span>
+                    </div>
+                    <p className="text-white/90 text-sm mb-6">
+                      {work.description}
+                    </p>
+                    <a
+                      href={work.siteUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-5 py-2.5 rounded-full bg-white text-black text-sm font-semibold hover:scale-105 transition"
+                    >
+                      Visit Site →
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

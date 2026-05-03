@@ -76,10 +76,10 @@ const Achivments = () => {
     <section className="w-full pb-12 xl:pb-24 bg-[#efeeec]">
       <div className="w-full px-4 md:px-7">
         {/* Section Header */}
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="flex items-center gap-4 text-[6vw] font-bold text-black">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6">
+          <h2 className="flex items-center gap-2 sm:gap-4 text-4xl sm:text-[6vw] font-bold text-black flex-wrap">
             My
-            <span className="inline-block rounded-[20%] overflow-hidden w-20 h-20 align-middle">
+            <span className="inline-block rounded-[20%] overflow-hidden w-12 h-12 sm:w-20 sm:h-20 align-middle shrink-0">
               <img
                 src="/achievement.jpg"
                 alt="Trophy Icon"

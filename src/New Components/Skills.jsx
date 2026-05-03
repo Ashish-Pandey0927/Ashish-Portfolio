@@ -111,8 +111,8 @@ const handleMouseUp = (e) => {
       <div className="w-full  mx-auto relative h-16">
         {/* <div className="absolute top-0 left-0 h-16 w-64 z-0 bg-transparent backdrop-blur-md " /> */}
         {/* Title and Left Fade Effect */}
-        <div className="absolute top-0 left-0 bottom-0 flex items-center z-10 w-64 bg-gradient-to-r from-[#efeeec] to-transparent backdrop-blur-md pointer-events-none">
-  <h2 className="text-left text-gray-900 text-sm font-medium tracking-tight pl-4 md:pl-7">
+        <div className="absolute top-0 left-0 bottom-0 flex items-center z-10 w-16 md:w-64 bg-gradient-to-r from-[#efeeec] to-transparent backdrop-blur-md pointer-events-none">
+  <h2 className="hidden md:block text-left text-gray-900 text-sm font-medium tracking-tight pl-4 md:pl-7">
     Technologies I work with:
   </h2>
 </div>
@@ -147,7 +147,7 @@ const handleMouseUp = (e) => {
         </div>
 
         {/* Right side fade effect */}
-        <div className="absolute top-0 right-0 bottom-0 w-24 bg-gradient-to-l from-[#efeeec] to-[#efeeec]/30 backdrop-blur-md pointer-events-none z-10"></div>
+        <div className="absolute top-0 right-0 bottom-0 w-12 md:w-24 bg-gradient-to-l from-[#efeeec] to-[#efeeec]/30 backdrop-blur-md pointer-events-none z-10"></div>
       </div>
     </section>
   );
