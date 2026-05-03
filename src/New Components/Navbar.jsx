@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import Lottie from "lottie-react";
 import waveAnimation from "../assets/lottie/wave.json";
-import { FaBriefcase, FaListUl, FaUser, FaUsers, FaEnvelope } from 'react-icons/fa6';
+import { FaBriefcase, FaListUl, FaUser, FaUsers, FaEnvelope, FaHouse } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 
 const works = [
@@ -346,23 +346,27 @@ const Navbar = () => {
 
       {/* Mobile Bottom Navbar */}
       <div className="fixed bottom-8 left-1/2 -translate-x-1/2 w-[95%] max-w-[400px] bg-white/90 backdrop-blur-lg shadow-2xl rounded-full z-[999] flex items-center justify-around py-3 px-2 sm:px-4 lg:hidden">
-        <Link to="/works" className="flex flex-col items-center gap-1 text-gray-700 hover:text-black w-1/5">
+        <Link to="/" className="flex flex-col items-center gap-1 text-gray-700 hover:text-black w-1/6">
+          <FaHouse className="text-xl" />
+          <span className="text-[10px] font-medium">Home</span>
+        </Link>
+        <Link to="/works" className="flex flex-col items-center gap-1 text-gray-700 hover:text-black w-1/6">
           <FaBriefcase className="text-xl" />
           <span className="text-[10px] font-medium">Work</span>
         </Link>
-        <Link to="/services" className="flex flex-col items-center gap-1 text-gray-700 hover:text-black w-1/5">
+        <Link to="/services" className="flex flex-col items-center gap-1 text-gray-700 hover:text-black w-1/6">
           <FaListUl className="text-xl" />
           <span className="text-[10px] font-medium">Services</span>
         </Link>
-        <Link to="/about" className="flex flex-col items-center gap-1 text-gray-700 hover:text-black w-1/5">
+        <Link to="/about" className="flex flex-col items-center gap-1 text-gray-700 hover:text-black w-1/6">
           <FaUser className="text-xl" />
           <span className="text-[10px] font-medium">About</span>
         </Link>
-        <Link to="/clients" className="flex flex-col items-center gap-1 text-gray-700 hover:text-black w-1/5">
+        <Link to="/clients" className="flex flex-col items-center gap-1 text-gray-700 hover:text-black w-1/6">
           <FaUsers className="text-xl" />
           <span className="text-[10px] font-medium">Clients</span>
         </Link>
-        <Link to="/contact" className="flex flex-col items-center gap-1 text-gray-700 hover:text-black w-1/5">
+        <Link to="/contact" className="flex flex-col items-center gap-1 text-gray-700 hover:text-black w-1/6">
           <FaEnvelope className="text-xl" />
           <span className="text-[10px] font-medium">Contact</span>
         </Link>
